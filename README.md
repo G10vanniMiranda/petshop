@@ -2,11 +2,11 @@
 
 * Desktop
 
-<img src="./screnns/desktop.png" alt="">
+<img src="./screens/desktop.png" alt="">
 
 * Mobile
 
-<img src="./screnns/mobile.png" alt="">
+<img src="./screens/mobile.png" alt="">
 
 
 ### Referencia

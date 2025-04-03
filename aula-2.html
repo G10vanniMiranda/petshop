@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Aula 02</title>
+</head>
+
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"
+            alt="">
+        <button class="btn-menu" onclick="chamarMenu()">
+            <i class="bi bi-list"></i>
+        </button>
+    </header>
+    <h1>Menu Toggle</h1>
+
+    <div class="menu">
+        <ul>
+            <li><button>Home</button></li>
+            <li><button>Login</button></li>
+            <li><button id="btnSair" onclick="sair()">Sair</button></li>
+        </ul>
+    </div>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            color: white;
+            padding: 20px;
+            background-color: black;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 120px;
+        }
+
+        .btn-menu {
+            padding: 10px;
+            border-radius: 7px;
+        }
+
+        .menu {
+            width: 150px;
+            height: 150px;
+            background-color: #f8f8f8;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .esconder {
+            display: none;
+        }
+    </style>
+    <script>
+        const btnSair = document.getElementById('btnSair');
+
+        function sair() {
+            alert('Saindo...');
+            document.querySelector('.menu').classList.add('esconder');
+        }
+
+        function chamarMenu() {
+            alert('Saindo...');
+            document.querySelector('.menu').classList.remove('esconder');
+        }
+    </script>
+</body>
+
+</html>

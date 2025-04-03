@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 01 - Botões </title>
+</head>
+
+<body>
+    <h1>Criando botões</h1>
+
+    <button class="btn-green">Botão 1</button>
+    <button class="btn-red">Botão 2</button>
+    <button class="btn-black">Botão 3</button>
+    <button id="btn1" onclick="mudarCor()" class="btn1">Teste</button>
+    <button onclick="mudarCorBody()">Mudar Cor Body</button>
+
+    <style>
+        body {
+            background-color: blue;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .btn-green {
+            background-color: green;
+            color: white;
+        }
+
+        .btn-red {
+            background-color: red;
+            color: white;
+        }
+
+        .btn-black {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+    <script>
+        /* escopo de variaveis var, let, const */
+        //var btn1 = document.querySelector('.btn1');
+        var btn1 = document.getElementsByClassName('btn1');
+        var btn2 = document.querySelector('.btn-red');
+        var btn3 = document.getElementById('btn1');
+
+        console.log(btn1); //undefined
+
+        function mudarCor() {
+            // alert('Mudando a cor do botão!');
+            document.querySelector('.btn1').classList.add('btn-red');
+        }
+        function mudarCorBody() {
+            document.body.classList.add('btn-red');
+        }
+    </script>
+</body>
+
+</html>

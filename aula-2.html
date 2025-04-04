@@ -16,13 +16,17 @@
             <i class="bi bi-list"></i>
         </button>
     </header>
+
     <h1>Menu Toggle</h1>
 
     <div class="menu">
-        <ul>
-            <li><button>Home</button></li>
-            <li><button>Login</button></li>
-            <li><button id="btnSair" onclick="sair()">Sair</button></li>
+        <ul class="menu-list">
+            <li><button class="btn">Home</button></li>
+            <li><button class="btn">Login</button></li>
+            <li><button class="btn">Sobre</button></li>
+            <li><button class="btn">Contato</button></li>
+            <li><button class="btn">Ajuda</button></li>
+            <li><button id="btnSair" class="btn" onclick="sair()">Sair</button></li>
         </ul>
     </div>
 
@@ -55,7 +59,7 @@
 
         .menu {
             width: 150px;
-            height: 150px;
+            height: auto;
             background-color: #f8f8f8;
 
             position: absolute;
@@ -63,20 +67,45 @@
             right: 0;
         }
 
+        .menu-list {
+            gap: 10px;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+
+        }
+
+        .btn {
+            padding: 10px;
+            border-radius: 7px;
+            background-color: transparent;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            border-bottom: solid 2px #000;
+        }
+
+        #btnSair:hover {
+            border-bottom: solid red;
+        }
+
         .esconder {
             display: none;
         }
     </style>
+
     <script>
         const btnSair = document.getElementById('btnSair');
 
         function sair() {
-            alert('Saindo...');
             document.querySelector('.menu').classList.add('esconder');
         }
 
         function chamarMenu() {
-            alert('Saindo...');
             document.querySelector('.menu').classList.remove('esconder');
         }
     </script>
